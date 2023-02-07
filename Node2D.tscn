@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Asset/Block.png" type="Texture" id=2]
+[ext_resource path="res://Enemy/Rivai.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Ammo/Ammo.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 510.5, 14.5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+
+[node name="Rivai" parent="." instance=ExtResource( 3 )]
+
+[node name="Ammo" parent="." instance=ExtResource( 4 )]
+
+[node name="Block" type="KinematicBody2D" parent="."]
+visible = false
+position = Vector2( 2, 2 )
+
+[node name="Sprite" type="Sprite" parent="Block"]
+position = Vector2( 509.75, 425 )
+scale = Vector2( 1.41425, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block"]
+position = Vector2( 510, 576 )
+shape = SubResource( 1 )
