@@ -1,5 +1,6 @@
 extends Node
 
+var node_creation_parent = null
 var Player = null
 
 func instance_node(node, location, parent):

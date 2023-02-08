@@ -22,6 +22,6 @@ func _process(delta):
 #		kill.get_collider().queue_free()
 #		queue_free()
 
-
+#destroy bullet when not rendered in screen (save memory)
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

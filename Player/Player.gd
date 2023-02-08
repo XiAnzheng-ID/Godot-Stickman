@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-var ammo = preload("res://Ammo/Ammo.tscn")
-var speed = 150
-var shoot = true
-var move = Vector2()
+var ammo = preload("res://Ammo/Ammo.tscn") #spawn ammo
+var speed = 150 #movement speed
+var shoot = true # ammo delay shoot
+var move = Vector2() #movement
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
